@@ -1,0 +1,28 @@
+<h1>Stupid Coach</h1>
+
+
+<h2>You asked:</h2>
+<%= @question %>
+
+
+
+<h2>Coach's Reply:</h2>
+
+<p>
+<%=
+
+if @question == "I am going to work"
+  @answer[0]
+
+elsif @question[-1] == "?"
+  @answer[1]
+
+else
+  @answer[2]
+
+end
+
+%>
+</p>
+
+<%= link_to "Ask another question", ask_path %>
